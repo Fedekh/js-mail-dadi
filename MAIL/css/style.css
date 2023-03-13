@@ -1,3 +1,13 @@
 body {
     background-color: rgb(47, 43, 59);
 }
+
+.wrapper {
+    width: 70%;
+    margin: 100px auto;
+    color: red;
+}
+
+.hidden{
+    display: none;
+}

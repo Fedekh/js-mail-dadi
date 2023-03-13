@@ -14,15 +14,14 @@ const database = ["pippo@gmail.com", "pluto@gmail.com", "elonmusk@tesla.com", "c
 console.log (database, typeof database);
 
 
-
-
 // trame un ciclo che parta da 1 fino a tutta la lunghezza dell'array e quindi a tutte
 // le email presenti si controlla tramite if se la stringa (a mo' di email) inserita
 // dall'utente corrisponda a una di quelle inner array e si da esito positivo
 //in caso contrario si stamperà un messaggio d'errore
 
-const mail = prompt ("Inserire gentilemte lemail");
-let result = "non godi dei privilegi"
+const mail = prompt ("Inserire gentilemte l'email");
+
+let result = "non godi dei privilegi";
 for (let i = 0; i <= database.length; i++ ) {
     const match = database [i];
     if (mail === match){
@@ -34,5 +33,6 @@ if (result === "sei dei nostri") {
     console.log("godi dei permessi, puoi accedere" , mail);
 } else {
     console.log("non godi dei privilegi", mail);
+    
 }
 
