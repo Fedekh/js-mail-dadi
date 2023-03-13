@@ -46,22 +46,42 @@
 
 // INPUT
 
+//Stabilisco l'array di email presenti in archivio
 const database = ["pippo@gmail.com", "pluto@gmail.com", "elonmusk@tesla.com", "conte@gmail.com"]
 console.log (database, typeof database);
 
-const mail = document.querySelector(".floatingInputInvalid");
 
+const mail = document.querySelector(".form-control");
 let result = "non godi dei privilegi";
-for (let i = 0; i <= database.length; i++ ) {
-    const match = database [i];
-    if (mail === match){
-        result = "sei dei nostri";        
-    } 
-}
+const submit = document.querySelector(".submit");
+const cancel = document.querySelector(".cancel");
+const message = document.querySelector(".hidden");
+const error = document.querySelector(".hidden:nth-of-type(2)");
 
-if (result === "sei dei nostri") {
-    console.log("godi dei permessi, puoi accedere" , mail);
-} else {
-    console.log("non godi dei privilegi", mail);
+submit.addEventListener ('click', function(){
+        console.log(mail);        
+
+    for (let i = 0; i <= database.length; i++ ) {
+        const match = database [i];
+        if (mail.value === match){
+            result = "sei dei nostri";        
+        } 
+
+        if (result === "sei dei nostri") {
+            console.log("godi dei permessi, puoi accedere" , mail.value);
+            message.classList.remove("hidden");
+        } else {
+            console.log("non godi dei privilegi", mail.value);
+            error.classList.remove("hidden");        
+        }
+    }
     
-}
+        
+})
+
+cancel.addEventListener ('click', function(){
+    mail.value="";
+    message.classList.add('hidden');
+    error.classList.add("hidden");   
+
+})
