@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(36, 27, 13);
+    background-color: rgb(48, 48, 46);
 }
 
 .wrapper{
@@ -9,4 +9,28 @@ body {
 
 .wrapper > * {
     display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    color: red;
+}
+
+h2 {
+    color: rgb(17, 127, 34);
+}
+
+h3 {
+    color: aqua;
+}
+
+.user-random-number {
+    color: rgb(140, 91, 151);
+}
+
+.pc-random-number {
+    color: rgb(22, 49, 166);
 }
