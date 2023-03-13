@@ -48,7 +48,7 @@
 
 //Stabilisco l'array di email presenti in archivio
 const database = ["pippo@gmail.com", "pluto@gmail.com", "elonmusk@tesla.com", "conte@gmail.com"]
-console.log (database, typeof database);
+console.table (database);
 
 
 const mail = document.querySelector(".form-control");
@@ -58,27 +58,36 @@ const cancel = document.querySelector(".cancel");
 const message = document.querySelector(".hidden");
 const error = document.querySelector(".hidden:nth-of-type(2)");
 
-submit.addEventListener ('click', function(){
-        console.log(mail);        
 
+submit.addEventListener ('click', function(){
+        console.log(mail);   
+        let result = "non godi dei privilegi";
+
+    
     for (let i = 0; i <= database.length; i++ ) {
         const match = database [i];
         if (mail.value === match){
             result = "sei dei nostri";        
         } 
 
-        if (result === "sei dei nostri") {
-            console.log("godi dei permessi, puoi accedere" , mail.value);
-            message.classList.remove("hidden");
-        } else {
-            console.log("non godi dei privilegi", mail.value);
-            error.classList.remove("hidden");        
-        }
+        
+    }
+    if (result === "sei dei nostri") {
+        console.log("godi dei permessi, puoi accedere" , mail.value);
+        // rimuovo da un h2 l'id mentre lo inserisco nell'altro
+        message.classList.remove("hidden");
+        error.classList.add("hidden");
+    } else {
+        console.log("non godi dei privilegi", mail.value);
+        // rimuovo da un h2 l'id mentre lo inserisco nell'altro
+        error.classList.remove("hidden");
+        message.classList.add("hidden");
+
     }
     
         
 })
-
+    // resetto i campi
 cancel.addEventListener ('click', function(){
     mail.value="";
     message.classList.add('hidden');

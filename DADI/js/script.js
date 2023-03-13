@@ -16,14 +16,29 @@
 
 
 
-let pcNumber = Math.floor(Math.random()* 5) +1;
-let userNumber = Math.floor(Math.random()*5) +1;
-console.log(pcNumber, userNumber, typeof userNumber, typeof pcNumber);
+// let pcNumber = Math.floor(Math.random()* 5) +1;
+// let userNumber = Math.floor(Math.random()*5) +1;
+// console.log(pcNumber, userNumber, typeof userNumber, typeof pcNumber);
 
-if (pcNumber > userNumber) {
-    console.log("il pc ha un numero maggiore del giocatore",pcNumber, userNumber );
-}else if (pcNumber < userNumber) {
-    console.log("il giocatore ha un numero maggiore del pc", userNumber, pcNumber);
-} else {
-    console.log("i due numeri sono uguali",userNumber, pcNumber) ;
-}
+// if (pcNumber > userNumber) {
+//     console.log("il pc ha un numero maggiore del giocatore",pcNumber, userNumber );
+// }else if (pcNumber < userNumber) {
+//     console.log("il giocatore ha un numero maggiore del pc", userNumber, pcNumber);
+// } else {
+//     console.log("i due numeri sono uguali",userNumber, pcNumber) ;
+// }
+
+
+
+// ###########################################################################################
+
+// MILESTONE 2
+
+const wrapper = document.querySelector (".wrapper");
+const title = document.createElement("h1");
+title.innerHTML = "GIOCA A DADI";
+wrapper.prepend (title);
+
+let user = document.querySelector ("user-random-number");
+let pcN = document.querySelector (".pc-random-number");
+

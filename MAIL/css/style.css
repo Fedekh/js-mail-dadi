@@ -1,13 +1,22 @@
 body {
-    background-color: rgb(47, 43, 59);
+    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.gqitalia.it%2Fphotos%2F64099b29a08501148a39abed%2F16%3A9%2Fw_1280%2Cc_limit%2FElon_Musk_0001_GettyImages-1130611572.jpg&f=1&nofb=1&ipt=0ccd7e3ecb6cf4a77fdcadedfb104912f095f3dc99c6e20c0edae9f4e2af2842&ipo=images);
+    background-size: cover;
 }
 
 .wrapper {
     width: 70%;
     margin: 100px auto;
-    color: red;
+    color: rgb(66, 201, 163);
 }
 
 .hidden{
     display: none;
+}
+
+#confermaccess{
+    color: green;
+}
+
+#reset {
+    color: red;
 }
